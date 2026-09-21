@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://denax999.github.io/deneth-sadeepaa-website/sitemap.xml
