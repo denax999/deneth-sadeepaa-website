@@ -4,35 +4,58 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Search / identity metadata -->
+  <!-- =====================================================
+       PRIMARY SEO
+       ===================================================== -->
+  <title>Deneth Sadeepa | Denax — Creator & Researcher</title>
   <meta name="description" content="Deneth Sadeepa, known online as Denax — a YouTube content creator, researcher and visual storyteller exploring mysteries of the unknown, ancient legends, spirituality, meditation and psychology." />
   <meta name="author" content="Deneth Sadeepa" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#050505" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- Keywords (low priority for modern SEO, but harmless) -->
+  <meta name="keywords" content="Deneth Sadeepa, Denax, Denax Dossier, YouTube creator, researcher, visual storyteller, mysteries, ancient legends, spirituality, meditation, psychology, Sri Lanka" />
 
   <!-- Canonical URL: keep this free of the #home fragment -->
   <link rel="canonical" href="https://denax999.github.io/deneth-sadeepaa-website/" />
 
-  <!-- Open Graph -->
+  <!-- =====================================================
+       OPEN GRAPH (Facebook, LinkedIn, WhatsApp, etc.)
+       ===================================================== -->
   <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Deneth Sadeepa | Denax" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Deneth Sadeepa | Denax" />
   <meta property="og:description" content="Official website of Deneth Sadeepa (Denax) — YouTube content creator, researcher and visual storyteller." />
   <meta property="og:url" content="https://denax999.github.io/deneth-sadeepaa-website/" />
   <meta property="og:image" content="https://denax999.github.io/deneth-sadeepaa-website/assets/profile.jpg" />
   <meta property="og:image:alt" content="Portrait of Deneth Sadeepa" />
+  <meta property="og:image:width" content="941" />
+  <meta property="og:image:height" content="1672" />
   <meta property="profile:first_name" content="Deneth" />
   <meta property="profile:last_name" content="Sadeepa" />
+  <meta property="profile:username" content="denax" />
 
-  <!-- X / Twitter card -->
+  <!-- =====================================================
+       X / TWITTER CARD
+       ===================================================== -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Deneth Sadeepa | Denax" />
   <meta name="twitter:description" content="Official website of Deneth Sadeepa (Denax) — YouTube content creator, researcher and visual storyteller." />
   <meta name="twitter:image" content="https://denax999.github.io/deneth-sadeepaa-website/assets/profile.jpg" />
   <meta name="twitter:image:alt" content="Portrait of Deneth Sadeepa" />
 
-  <title>Deneth Sadeepa | Denax — Creator & Researcher</title>
+  <!-- =====================================================
+       FAVICON (inline SVG — no extra file needed)
+       ===================================================== -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3Ctext x='50' y='62' font-family='Arial' font-size='34' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23050505'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='700' fill='%23ffffff' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
 
-  <!-- Google / schema.org structured data for the profile entity -->
+  <!-- =====================================================
+       STRUCTURED DATA — schema.org (Profile)
+       ===================================================== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -82,6 +105,10 @@
           "Storytelling",
           "Video Creation"
         ],
+        "nationality": {
+          "@type": "Country",
+          "name": "Sri Lanka"
+        },
         "sameAs": [
           "https://www.youtube.com/@denaxdossier",
           "https://www.instagram.com/deneth_sadeepa_/",
@@ -93,23 +120,37 @@
   }
   </script>
 
+  <!-- =====================================================
+       FONTS
+       ===================================================== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- =====================================================
+       STYLES
+       ===================================================== -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="cursor-glow"></div>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <header class="nav-wrap">
+  <!-- Ambient backgrounds -->
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
+  <header class="nav-wrap" id="navWrap">
     <nav class="nav container" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="Deneth Sadeepa home">
-        <span class="brand-mark">D</span>
+      <a class="brand" href="#home" aria-label="Deneth Sadeepa — home">
+        <span class="brand-mark" aria-hidden="true">D</span>
         <span>DENAX</span>
       </a>
-      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
       </button>
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
@@ -121,6 +162,9 @@
   </header>
 
   <main>
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
     <section id="home" class="hero container">
       <div class="hero-copy reveal">
         <p class="eyebrow">DENAX · CREATOR · RESEARCHER</p>
@@ -130,32 +174,42 @@
           to meditation, psychology, and the hidden depths of the human mind.
         </p>
         <div class="hero-actions">
-          <a href="#work" class="btn btn-solid">Explore My Work <span>↗</span></a>
+          <a href="#work" class="btn btn-solid">Explore My Work <span aria-hidden="true">↗</span></a>
           <a href="#connect" class="btn btn-ghost">Let's Connect</a>
         </div>
         <div class="hero-meta">
-          <span><i></i> Creator & Researcher</span>
+          <span><i aria-hidden="true"></i> Creator &amp; Researcher</span>
           <span>Based in Sri Lanka</span>
         </div>
       </div>
 
       <div class="hero-visual reveal delay-1">
-        <div class="portrait-ring"></div>
+        <div class="portrait-ring" aria-hidden="true"></div>
         <div class="portrait-card">
-          <img src="assets/profile.jpg" alt="Deneth Sadeepa, also known online as Denax" width="941" height="1672" fetchpriority="high" decoding="async" />
-          <div class="portrait-overlay"></div>
+          <img
+            src="assets/profile.jpg"
+            alt="Deneth Sadeepa, also known online as Denax"
+            width="941"
+            height="1672"
+            fetchpriority="high"
+            decoding="async"
+          />
+          <div class="portrait-overlay" aria-hidden="true"></div>
           <div class="portrait-label">
             <span>DENAX</span>
             <span>OFFICIAL PROFILE</span>
           </div>
         </div>
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
-        <span class="floating-word word-1">UNKNOWN</span>
-        <span class="floating-word word-2">BEYOND</span>
+        <div class="orbit orbit-1" aria-hidden="true"></div>
+        <div class="orbit orbit-2" aria-hidden="true"></div>
+        <span class="floating-word word-1" aria-hidden="true">UNKNOWN</span>
+        <span class="floating-word word-2" aria-hidden="true">BEYOND</span>
       </div>
     </section>
 
+    <!-- =====================================================
+         ABOUT
+         ===================================================== -->
     <section id="about" class="section container">
       <div class="section-head reveal">
         <p class="eyebrow">01 / ABOUT</p>
@@ -197,13 +251,16 @@
             <small>Research • Story • Discovery</small>
           </div>
           <div class="quote-card">
-            <span class="quote-mark">“</span>
+            <span class="quote-mark" aria-hidden="true">"</span>
             <p>The deeper you look, the more there is to discover.</p>
           </div>
         </aside>
       </div>
     </section>
 
+    <!-- =====================================================
+         WHAT I DO
+         ===================================================== -->
     <section id="work" class="section section-dark">
       <div class="container">
         <div class="section-head reveal">
@@ -219,7 +276,7 @@
               I create videos for companies, brands and individuals based on the topics
               they want to communicate — from research and storytelling to a finished concept.
             </p>
-            <span class="work-line"></span>
+            <span class="work-line" aria-hidden="true"></span>
           </article>
 
           <article class="work-card reveal delay-1">
@@ -229,22 +286,25 @@
               I create and publish content for social platforms, building ideas into
               engaging videos that are designed to hold attention and communicate clearly.
             </p>
-            <span class="work-line"></span>
+            <span class="work-line" aria-hidden="true"></span>
           </article>
 
           <article class="work-card reveal delay-2">
             <div class="work-number">03</div>
-            <h3>Research & Storytelling</h3>
+            <h3>Research &amp; Storytelling</h3>
             <p>
               I dive into history, meditation, ancient traditions, psychology and unusual
               subjects, then shape discoveries into accessible stories.
             </p>
-            <span class="work-line"></span>
+            <span class="work-line" aria-hidden="true"></span>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- =====================================================
+         EXPLORE
+         ===================================================== -->
     <section id="explore" class="section container">
       <div class="section-head reveal">
         <p class="eyebrow">03 / MY EXPLORATIONS</p>
@@ -253,20 +313,31 @@
 
       <div class="explore-list">
         <div class="explore-item reveal">
-          <span>01</span><h3>Mysteries of the Unknown</h3><p>Unexplained stories, strange events and questions without easy answers.</p>
+          <span>01</span>
+          <h3>Mysteries of the Unknown</h3>
+          <p>Unexplained stories, strange events and questions without easy answers.</p>
         </div>
         <div class="explore-item reveal delay-1">
-          <span>02</span><h3>Ancient Legends</h3><p>Old stories, forgotten traditions and the history behind fascinating legends.</p>
+          <span>02</span>
+          <h3>Ancient Legends</h3>
+          <p>Old stories, forgotten traditions and the history behind fascinating legends.</p>
         </div>
         <div class="explore-item reveal delay-2">
-          <span>03</span><h3>Spirituality & Meditation</h3><p>Inner exploration, contemplative practices and ideas that invite reflection.</p>
+          <span>03</span>
+          <h3>Spirituality &amp; Meditation</h3>
+          <p>Inner exploration, contemplative practices and ideas that invite reflection.</p>
         </div>
-        <div class="explore-item reveal">
-          <span>04</span><h3>Psychology</h3><p>Human behavior, perception and the hidden layers of the mind.</p>
+        <div class="explore-item reveal delay-3">
+          <span>04</span>
+          <h3>Psychology</h3>
+          <p>Human behavior, perception and the hidden layers of the mind.</p>
         </div>
       </div>
     </section>
 
+    <!-- =====================================================
+         CONNECT
+         ===================================================== -->
     <section id="connect" class="section connect-section">
       <div class="container connect-box reveal">
         <div>
@@ -280,30 +351,36 @@
         </div>
         <div class="socials" aria-label="Official social profiles">
           <a class="social" href="https://youtube.com/@denaxdossier" target="_blank" rel="me noopener noreferrer" aria-label="YouTube — Denax Dossier">
-            <span>YouTube · Denax Dossier</span><b>↗</b>
+            <span>YouTube · Denax Dossier</span><b aria-hidden="true">↗</b>
           </a>
           <a class="social" href="https://www.facebook.com/share/1CtqYSfuoV/?mibextid=wwXIfr" target="_blank" rel="me noopener noreferrer" aria-label="Facebook — Deneth Sadeepa">
-            <span>Facebook · Deneth Sadeepa</span><b>↗</b>
+            <span>Facebook · Deneth Sadeepa</span><b aria-hidden="true">↗</b>
           </a>
           <a class="social" href="https://www.instagram.com/deneth_sadeepa_/" target="_blank" rel="me noopener noreferrer" aria-label="Instagram — Deneth Sadeepa">
-            <span>Instagram · @deneth_sadeepa_</span><b>↗</b>
+            <span>Instagram · @deneth_sadeepa_</span><b aria-hidden="true">↗</b>
           </a>
           <a class="social" href="https://www.tiktok.com/@denethsadeepa6" target="_blank" rel="me noopener noreferrer" aria-label="TikTok — Deneth Sadeepa">
-            <span>TikTok · @denethsadeepa6</span><b>↗</b>
+            <span>TikTok · @denethsadeepa6</span><b aria-hidden="true">↗</b>
           </a>
           <a class="social" href="https://www.linkedin.com/in/deneth-sadeepa-766542432" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn — Deneth Sadeepa">
-            <span>LinkedIn · Deneth Sadeepa</span><b>↗</b>
+            <span>LinkedIn · Deneth Sadeepa</span><b aria-hidden="true">↗</b>
           </a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
   <footer class="footer container">
     <div>© <span id="year"></span> Deneth Sadeepa</div>
     <div>DENAX · STORIES BEYOND THE OBVIOUS</div>
   </footer>
 
+  <!-- =====================================================
+       SCRIPTS
+       ===================================================== -->
   <script src="script.js"></script>
 </body>
 </html>
