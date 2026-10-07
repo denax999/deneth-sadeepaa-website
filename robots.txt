@@ -1,4 +1,81 @@
+# =====================================================
+# robots.txt — Deneth Sadeepa | Denax
+# https://denax999.github.io/deneth-sadeepaa-website/
+# =====================================================
+
+# Allow all well-behaved crawlers full access
 User-agent: *
 Allow: /
 
+# Block nothing for standard crawlers.
+# Assets folder is public and needed for social previews (OG images).
+
+# =====================================================
+# Specific crawler rules (optional, best practice)
+# =====================================================
+
+# --- Search engines (explicitly allowed) ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# --- AI crawlers (set to your preference) ---
+# If you want AI assistants to index your content, keep these as Allow.
+# If you don't want AI training/scraping, change to Disallow.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# --- Aggressive SEO/scraper bots (block these) ---
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# --- Bad bots (block) ---
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# =====================================================
+# Crawl-delay (only if a crawler is hammering your site)
+# Note: Googlebot ignores this directive.
+# =====================================================
+# User-agent: *
+# Crawl-delay: 5
+
+# =====================================================
+# Sitemap location
+# =====================================================
 Sitemap: https://denax999.github.io/deneth-sadeepaa-website/sitemap.xml
