@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ================================================
+       Main page — Deneth Sadeepa | Denax
+       ================================================ -->
   <url>
     <loc>https://denax999.github.io/deneth-sadeepaa-website/</loc>
+    <lastmod>2026-10-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Profile image for Google Image Search -->
+    <image:image>
+      <image:loc>https://denax999.github.io/deneth-sadeepaa-website/assets/profile.jpg</image:loc>
+      <image:title>Deneth Sadeepa (Denax) — Official Profile</image:title>
+      <image:caption>Portrait of Deneth Sadeepa, known online as Denax — YouTube content creator, researcher and visual storyteller.</image:caption>
+    </image:image>
   </url>
+
 </urlset>
